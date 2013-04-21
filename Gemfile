@@ -48,3 +48,10 @@ group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end
 
+group :console do
+  # Console specific - need changes to ~/.irbrc for these to work
+  gem 'hirb' # improved inspection: http://tagaholic.me/hirb/doc/
+  gem 'interactive_editor' # http://vimcasts.org/episodes/running-vim-within-irb/
+  gem 'clipboard'
+end
+
