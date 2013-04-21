@@ -1,31 +1,29 @@
-%h1 Listing donations
-
-%table
-  %tr
-    %th Name
-    %th Country
-    %th State
-    %th District
-    %th Transaction
-    %th Amount
-    %th Date
-    %th
-    %th
-    %th
-
-  - @donations.each do |donation|
+- model_class = Donation
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize
+%table.table.table-striped
+  %thead
     %tr
-      %td= donation.name
-      %td= donation.country
-      %td= donation.state
-      %td= donation.district
-      %td= donation.transaction_id
-      %td= donation.amount
-      %td= donation.date
-      %td= link_to 'Show', donation
-      %td= link_to 'Edit', edit_donation_path(donation)
-      %td= link_to 'Destroy', donation, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:name)
+      %th= model_class.human_attribute_name(:country)
+      %th= model_class.human_attribute_name(:state)
+      %th= model_class.human_attribute_name(:district)
+      %th= model_class.human_attribute_name(:transaction_id)
+      %th= model_class.human_attribute_name(:amount)
+      %th= model_class.human_attribute_name(:date)
+      %th= model_class.human_attribute_name(:created_at)
+  %tbody
+    - @donations.each do |donation|
+      %tr
+        %td= link_to donation.id, donation_path(donation)
+        %td= donation.name
+        %td= donation.country
+        %td= donation.state
+        %td= donation.district
+        %td= donation.transaction_id
+        %td= donation.amount
+        %td= donation.date
+        %td=l donation.created_at
 
-%br
-
-= link_to 'New Donation', new_donation_path
+= link_to t('.new', :default => t("helpers.links.new")), new_donation_path, :class => 'btn btn-primary'
