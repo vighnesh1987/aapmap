@@ -36,3 +36,11 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+
+gem 'nokogiri'
+
+gem "haml"
+gem "haml-rails", group: :development
+gem "mechanize"
+#gem "rubyful_soup"

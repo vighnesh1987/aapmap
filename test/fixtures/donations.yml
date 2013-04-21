@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  country: MyString
+  state: MyString
+  district: MyString
+  transaction_id: MyString
+  amount: 1
+  date: 2013-04-20 17:48:26
+
+two:
+  name: MyString
+  country: MyString
+  state: MyString
+  district: MyString
+  transaction_id: MyString
+  amount: 1
+  date: 2013-04-20 17:48:26
