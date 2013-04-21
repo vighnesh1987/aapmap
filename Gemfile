@@ -43,4 +43,8 @@ gem 'nokogiri'
 gem "haml"
 gem "haml-rails", group: :development
 gem "mechanize"
-#gem "rubyful_soup"
+
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+end
+

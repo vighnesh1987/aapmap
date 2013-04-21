@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @donation.name
+%p
+  %b Country:
+  = @donation.country
+%p
+  %b State:
+  = @donation.state
+%p
+  %b District:
+  = @donation.district
+%p
+  %b Transaction:
+  = @donation.transaction_id
+%p
+  %b Amount:
+  = @donation.amount
+%p
+  %b Date:
+  = @donation.date
+
+= link_to 'Edit', edit_donation_path(@donation)
+\|
+= link_to 'Back', donations_path
