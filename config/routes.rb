@@ -1,7 +1,4 @@
 Aapmap::Application.routes.draw do
-  resources :donations
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
